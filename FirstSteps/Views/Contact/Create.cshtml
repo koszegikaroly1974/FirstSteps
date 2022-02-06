@@ -1,0 +1,64 @@
+﻿@model FirstSteps.Models.Contact
+
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Kapcsolattartó hozzáadása</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="ContactName"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="ContactStatus"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="ContactPhone"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="ContactMail"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="ContactNotifications"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <input asp-for="ContactName" class="form-control" />
+                        <span asp-validation-for="ContactName" class="text-danger"></span>
+                    </div>
+                    <div class="col-2">
+                        <input asp-for="ContactStatus" class="form-control" />
+                        <span asp-validation-for="ContactStatus" class="text-danger"></span>
+                    </div>
+                    <div class="col-2">
+                        <input asp-for="ContactPhone" class="form-control" />
+                        <span asp-validation-for="ContactPhone" class="text-danger"></span>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="ContactMail" class="form-control" />
+                        <span asp-validation-for="ContactMail" class="text-danger"></span>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="ContactNotifications" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Felvitel" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-danger w-75">Vissza</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

@@ -1,0 +1,63 @@
+﻿
+@model FirstSteps.Models.Partner
+
+<form method="post" asp-action="Updatepost">
+    <input asp-for="PartnerId" hidden />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Partneradatok módosítása</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="PartnerName"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="PartnerAddress"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="PartnerTaxNumber"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="PartnerNotifications"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="ContactId"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <input asp-for="PartnerName" class="form-control" />
+                        <span asp-validation-for="PartnerName" class="text-danger"></span>
+                    </div>
+                    <div class="col-2">
+                        <input asp-for="PartnerAddress" class="form-control" />
+                        <span asp-validation-for="PartnerAddress" class="text-danger"></span>
+                    </div>
+                    <div class="col-2">
+                        <input asp-for="PartnerTaxNumber" class="form-control" />
+                        <span asp-validation-for="PartnerTaxNumber" class="text-danger"></span>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="PartnerNotifications" class="form-control" />
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="ContactId" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Módosítás" />
+                        </div>
+                        <div class="col">
+                            <input asp-for="PartnerId" hidden />
+                            <a asp-action="Index" class="btn btn-danger w-75">Vissza</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
